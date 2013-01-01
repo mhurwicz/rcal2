@@ -1,0 +1,41 @@
+<%= form_for(@calevent) do |f| %>
+  <% if @calevent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calevent.errors.count, "error") %> prohibited this calevent from being saved:</h2>
+
+      <ul>
+      <% @calevent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :calday %><br />
+    <%= f.text_field :calday %>
+  </div>
+  <div class="field">
+    <%= f.label :caldate %><br />
+    <%= f.date_select :caldate %>
+  </div>
+  <div class="field">
+    <%= f.label :callocation %><br />
+    <%= f.text_field :callocation %>
+  </div>
+  <div class="field">
+    <%= f.label :caldescription %><br />
+    <%= f.text_area :caldescription %>
+  </div>
+  <div class="field">
+    <%= f.label :caltime %><br />
+    <%= f.time_select :caltime %>
+  </div>
+  <div class="field">
+    <%= f.label :calenddate %><br />
+    <%= f.date_select :calenddate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

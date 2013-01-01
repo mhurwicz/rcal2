@@ -1,0 +1,33 @@
+<h1>Listing calevents</h1>
+
+<table>
+  <tr>
+    <th>Calday</th>
+    <th>Caldate</th>
+    <th>Callocation</th>
+    <th>Caldescription</th>
+    <th>Caltime</th>
+    <th>Calenddate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calevents.each do |calevent| %>
+  <tr>
+    <td><%= calevent.calday %></td>
+    <td><%= calevent.caldate %></td>
+    <td><%= calevent.callocation %></td>
+    <td><%= calevent.caldescription %></td>
+    <td><%= calevent.caltime %></td>
+    <td><%= calevent.calenddate %></td>
+    <td><%= link_to 'Show', calevent %></td>
+    <td><%= link_to 'Edit', edit_calevent_path(calevent) %></td>
+    <td><%= link_to 'Destroy', calevent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Calevent', new_calevent_path %>

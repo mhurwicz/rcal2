@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Calday:</b>
+  <%= @calevent.calday %>
+</p>
+
+<p>
+  <b>Caldate:</b>
+  <%= @calevent.caldate %>
+</p>
+
+<p>
+  <b>Callocation:</b>
+  <%= @calevent.callocation %>
+</p>
+
+<p>
+  <b>Caldescription:</b>
+  <%= @calevent.caldescription %>
+</p>
+
+<p>
+  <b>Caltime:</b>
+  <%= @calevent.caltime %>
+</p>
+
+<p>
+  <b>Calenddate:</b>
+  <%= @calevent.calenddate %>
+</p>
+
+
+<%= link_to 'Edit', edit_calevent_path(@calevent) %> |
+<%= link_to 'Back', calevents_path %>
